@@ -1,0 +1,24 @@
+ALGORITHME first-step-in-algo
+VAR
+    i: INTEGER;
+    str_length, words_nbr, vowels_nbr : INTEGER := 0;
+    str : STRING;
+BEGIN
+    Read(str);
+    str_length := str.length;
+    FOR i FROM 1 TO str_length   DO 
+        Read(str[i]);
+        IF (str[i] = " ") THEN
+            words_nbr := words_nbr + 1;
+        END_IF
+
+        IF (str[i] in ['A','a','e','E','i','I','o','O','u','U']) THEN
+            vowels_nbr := vowels_nbr + 1;
+        END_IF
+    END_FOR
+
+    Write('The length of the sentence :' str_length);
+    Write('The number of words in the sentence :' words_nbr+1);
+    Write('The number of vowels in the sentence :' vowels_nbr);
+
+END
